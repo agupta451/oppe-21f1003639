@@ -1,6 +1,8 @@
 name: Feature Tests with Pytest and CML
 
 on:
+  push:
+    branches: [main]
   pull_request:
     branches: [ main ]
 
@@ -28,7 +30,7 @@ jobs:
 
     - name: Post CML Report
       env:
-        REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         pip install cml
         echo "## ✅ Pytest Report" > report.md

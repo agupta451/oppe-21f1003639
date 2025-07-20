@@ -2,4 +2,5 @@ pandas
 pytest
 pyarrow
 scikit-learn
+cml
 

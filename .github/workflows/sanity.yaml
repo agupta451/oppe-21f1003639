@@ -28,13 +28,4 @@ jobs:
       run: |
         pytest tests/ > test_report.txt || true
 
-    - name: Post CML Report
-      env:
-        REPO_TOKEN: ${{ secrets.GH_TOKEN }}
-      run: |
-        pip install cml
-        echo "## ✅ Pytest Report" > report.md
-        echo "\`\`\`" >> report.md
-        cat test_report.txt >> report.md
-        echo "\`\`\`" >> report.md
-        cml comment create report.md
+    

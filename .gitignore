@@ -1,0 +1,26 @@
+# Ignore Parquet files
+*.parquet
+**/*.parquet
+
+# Ignore DVC-generated files/folders (optional if using remote storage)
+
+.dvc/cache/
+.dvc/tmp/
+
+# Ignore MLflow local logs
+mlruns/
+
+# Python cache and logs
+__pycache__/
+*.py[cod]
+*.log
+
+# Ignore virtual environment
+venv/
+.env/
+
+# Jupyter Notebook checkpoints (if any)
+.ipynb_checkpoints/
+
+# VSCode settings (optional)
+.vscode/
